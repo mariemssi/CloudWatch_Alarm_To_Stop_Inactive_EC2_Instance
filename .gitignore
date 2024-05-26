@@ -1,0 +1,9 @@
+# The files to ignore in the terraform folders 
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+README.md
