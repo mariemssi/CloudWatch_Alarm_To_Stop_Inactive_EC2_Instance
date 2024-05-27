@@ -2,6 +2,23 @@
 
 ![image](https://github.com/mariemssi/CloudWatch_Alarm_To_Stop_Inactive_EC2_Instance/assets/69463864/9a93ebbe-13cc-4d43-bede-2b44acc35362)
 
+The metric that I choose to detect an inactive instance is CPUUtilization, which is collected by default every 5 minutes and sent to CloudWatch. The alarm is triggered only if the CPU utilization remains below 2% at any period during one hour (12 consecutive periods of 5 minutes each). The actions triggered by the alarm are stopping the instance and notifying me by email.
+
+* Metric : CPUUtilization
+
+* Statistic : Average
+
+* Period : 300 seconds (5 minutes)
+
+* Threshold : 2%
+
+* Alarm condition : Lower or Equal
+
+* Evaluation Periods : 12
+
+* Datapoints to Alarm : 12
+
+* Actions : SNS mail notification + EC2 stop Instance
 
 # Steps to run the solution 
 
